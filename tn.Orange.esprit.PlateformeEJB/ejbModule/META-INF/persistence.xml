@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="tn.Orange.esprit.PlateformeEJB">
+	<jta-data-source>java:/ExamDS</jta-data-source>
+	
+	<class>persistance.Utilisateur</class>
+	<class>persistance.Profil</class>
+	<class>persistance.Connexion_Type</class>
+	<class>persistance.Localisation</class>
+	<class>persistance.Accounting_Information</class>
+	<class>persistance.Core_Attributs</class>
+	<class>persistance.Fichiers</class>
+	<class>persistance.Interfaces</class>
+	
+		<properties>
+		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ExamDB" />
+		 
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
